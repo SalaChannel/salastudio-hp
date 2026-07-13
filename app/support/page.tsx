@@ -4,9 +4,21 @@ export const metadata = {
 
 export default function SupportPage() {
   return (
-    <main className="mx-auto flex min-h-full w-full max-w-3xl flex-1 flex-col px-6 py-16">
-      <h1 className="text-3xl font-semibold tracking-tight">サポート</h1>
-      <p className="mt-4 text-neutral-600">サポート窓口（準備中）</p>
+    <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16">
+      <h1 className="text-3xl font-semibold tracking-tight text-neutral-900">
+        サポート
+      </h1>
+      <p className="mt-8 text-base leading-7 text-neutral-700">
+        お問い合わせは以下のメールアドレスまでご連絡ください。
+      </p>
+      <p className="mt-4">
+        <a
+          href="mailto:support@salastudio.jp"
+          className="text-base text-neutral-900 underline underline-offset-4"
+        >
+          support@salastudio.jp
+        </a>
+      </p>
     </main>
   );
 }
