@@ -1,22 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { TagFrame } from "@/components/TagFrame";
 
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col bg-paper">
-      <section className="flex justify-center px-6 py-10 md:py-14">
-        <Image
-          src="/brand/salastudio-header.png"
-          alt="SalaStudio"
-          width={12751}
-          height={5227}
-          priority
-          className="h-auto w-full max-w-[900px] object-contain"
-        />
-      </section>
-
-      <div className="flex flex-1 flex-col border-t border-line md:flex-row">
+      <div className="flex flex-1 flex-col md:flex-row">
         <section className="flex flex-1 flex-col justify-center gap-4 border-b border-line px-8 py-16 md:border-b-0 md:border-r md:px-12">
           <TagFrame variant="apps">Apps</TagFrame>
           <h2 className="font-mono text-3xl font-semibold tracking-tight text-ink">
