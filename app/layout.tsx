@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans_JP } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-ibm-plex-mono",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexSansJP = IBM_Plex_Sans_JP({
+  weight: ["400", "500"],
   subsets: ["latin"],
+  variable: "--font-ibm-plex-sans-jp",
 });
 
 export const metadata: Metadata = {
@@ -30,9 +33,10 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${ibmPlexSansJP.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">
+      <body className="flex min-h-full flex-col bg-paper font-sans text-ink">
+        <SiteHeader />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
       </body>

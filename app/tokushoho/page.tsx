@@ -70,7 +70,7 @@ export default function TokushohoPage() {
         </p>
       </Section>
 
-      <p className="border-t border-neutral-200 pt-6 text-sm text-neutral-500">
+      <p className="border-t border-line pt-6 text-sm text-ink/50">
         ※本ページは、現時点でサイト上での直接販売を行っていない項目についても、将来のサービス開始に備えて記載しています。各サービスの提供開始時に、価格・支払方法等の詳細を別途更新します。
       </p>
     </LegalPage>
