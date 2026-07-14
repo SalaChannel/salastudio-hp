@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans_JP } from "next/font/google";
+import { IBM_Plex_Mono, Shippori_Mincho, Zen_Kaku_Gothic_New } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { GrainOverlay } from "@/components/GrainOverlay";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: ["500", "600", "700"],
+const shipporiMincho = Shippori_Mincho({
+  weight: ["600", "700", "800"],
   subsets: ["latin"],
-  variable: "--font-ibm-plex-mono",
+  variable: "--font-shippori",
 });
 
-const ibmPlexSansJP = IBM_Plex_Sans_JP({
+const zenKaku = Zen_Kaku_Gothic_New({
   weight: ["400", "500"],
   subsets: ["latin"],
-  variable: "--font-ibm-plex-sans-jp",
+  variable: "--font-zen-kaku",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["500", "600"],
+  subsets: ["latin"],
+  variable: "--font-ibm-plex-mono",
 });
 
 export const metadata: Metadata = {
@@ -33,11 +40,12 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${ibmPlexSansJP.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      className={`${shipporiMincho.variable} ${zenKaku.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-paper font-sans text-ink">
+      <body className="relative flex min-h-full flex-col bg-bg font-sans text-ink">
+        <GrainOverlay />
         <SiteHeader />
-        <div className="flex flex-1 flex-col">{children}</div>
+        <div className="relative z-10 flex flex-1 flex-col">{children}</div>
         <Footer />
       </body>
     </html>

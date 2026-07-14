@@ -101,7 +101,7 @@ export default function TermsPage() {
                 AI連携機能を通じたデータの取り扱いについては、
                 <Link
                   href="/privacy"
-                  className="underline underline-offset-4 hover:text-ink"
+                  className="text-amber underline underline-offset-4 hover:text-amber-deep"
                 >
                   プライバシーポリシー
                 </Link>

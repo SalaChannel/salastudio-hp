@@ -27,7 +27,7 @@ export default function PrivacyPage() {
               事業者の詳細情報（氏名・住所等）は、
               <Link
                 href="/tokushoho"
-                className="underline underline-offset-4 hover:text-ink"
+                className="text-amber underline underline-offset-4 hover:text-amber-deep"
               >
                 特定商取引法に基づく表記
               </Link>

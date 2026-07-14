@@ -11,32 +11,32 @@ export default function CuePage() {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16">
       <div className="flex flex-wrap items-center gap-3">
-        <h1 className="font-mono text-3xl font-semibold tracking-tight text-ink md:text-4xl">
+        <h1 className="font-serif text-3xl font-bold tracking-wide text-ink md:text-4xl">
           Cue
         </h1>
         <ComingSoonBadge />
       </div>
 
       <section className="mt-12 space-y-3">
-        <h2 className="font-mono text-2xl font-semibold tracking-tight text-ink">
+        <h2 className="font-serif text-2xl font-bold tracking-wide text-ink">
           気づけば、通知に追われなくなっていた。
         </h2>
-        <p className="text-ink/70">
+        <p className="text-muted">
           静かでスマートな、チームのためのタスク管理。
         </p>
       </section>
 
       <section className="mt-14 space-y-3">
-        <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+        <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
           Cueとは
         </h2>
-        <p className="leading-7 text-ink/80">
+        <p className="leading-7 text-muted">
           家族・友人グループ・仕事のチームなど、複数人で使うタスク管理アプリです。既存のリマインダーアプリはチーム利用や位置情報通知の精度に弱さがあるという課題から生まれました。通知のノイズを排し、生活に静かに寄り添うことを大切にしています。
         </p>
       </section>
 
       <section className="mt-14 space-y-6">
-        <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+        <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
           4つの特徴
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -56,7 +56,7 @@ export default function CuePage() {
       </section>
 
       <section className="mt-14 space-y-4">
-        <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+        <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
           できること
         </h2>
         <ul className="space-y-0 border border-line px-5 py-2">
@@ -73,7 +73,7 @@ export default function CuePage() {
           ].map((item) => (
             <li
               key={item}
-              className="border-b border-line/70 py-3 text-ink/80 last:border-b-0"
+              className="border-b border-line py-3 text-muted last:border-b-0"
             >
               {item}
             </li>
@@ -82,29 +82,29 @@ export default function CuePage() {
       </section>
 
       <section className="mt-14 space-y-3">
-        <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+        <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
           Apple Watchにも
         </h2>
-        <p className="leading-7 text-ink/80">
+        <p className="leading-7 text-muted">
           インフォグラフ文字盤のコーナーコンプリケーションで、次の通知時刻をひと目で確認。通知からその場で完了操作もできます。
         </p>
       </section>
 
       <section className="mt-14 space-y-3">
         <div className="flex flex-wrap items-center gap-3">
-          <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+          <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
             AIにタスクを頼む
           </h2>
           <ComingSoonBadge />
         </div>
-        <p className="leading-7 text-ink/80">
+        <p className="leading-7 text-muted">
           Plus
           AI会員向けに、チャットでタスクの作成・編集・完了・通知設定・アサインを行える機能を準備中です。タスクに関係のない依頼はお断りする、用途を限定した設計にしています。
         </p>
       </section>
 
       <section className="mt-14 space-y-4">
-        <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+        <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
           料金プラン
         </h2>
         <div className="grid gap-4 sm:grid-cols-3">
@@ -120,19 +120,19 @@ export default function CuePage() {
             detail="Plusの内容に加えてAI機能"
           />
         </div>
-        <p className="leading-7 text-ink/80">
+        <p className="leading-7 text-muted">
           チーム内の誰か1人（ホスト）がPlus以上に加入していれば、チーム全員の広告が非表示になります。
         </p>
-        <p className="leading-7 text-ink/80">
+        <p className="leading-7 text-muted">
           アプリ内のご購入はApple社のApp内課金となります。Googleアカウントでログインされた方は、当サイトからのご購入も近日提供予定です。
         </p>
       </section>
 
       <section className="mt-14 space-y-3">
-        <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+        <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
           対応環境
         </h2>
-        <p className="leading-7 text-ink/80">
+        <p className="leading-7 text-muted">
           iOS（Apple Watch連携あり）。Android版は今後対応予定です。
         </p>
       </section>
@@ -148,9 +148,9 @@ function FeatureCard({
   children: ReactNode;
 }) {
   return (
-    <div className="border border-line px-5 py-5">
-      <h3 className="font-mono font-semibold tracking-tight text-ink">{title}</h3>
-      <p className="mt-2 text-sm leading-6 text-ink/70">{children}</p>
+    <div className="border border-line bg-bg-soft px-5 py-5">
+      <h3 className="font-serif font-bold tracking-wide text-ink">{title}</h3>
+      <p className="mt-2 text-sm leading-6 text-muted">{children}</p>
     </div>
   );
 }
@@ -165,12 +165,12 @@ function PricingCard({
   detail?: string;
 }) {
   return (
-    <div className="border border-line px-5 py-5">
-      <p className="font-mono font-semibold tracking-tight text-ink">{name}</p>
+    <div className="border border-line bg-bg-soft px-5 py-5">
+      <p className="font-serif font-bold tracking-wide text-ink">{name}</p>
       {detail ? (
-        <p className="mt-2 text-sm leading-6 text-ink/70">{detail}</p>
+        <p className="mt-2 text-sm leading-6 text-muted">{detail}</p>
       ) : null}
-      <p className="mt-3 font-mono text-sm font-medium text-teal-deep">{price}</p>
+      <p className="mt-3 font-mono text-sm font-medium text-amber">{price}</p>
     </div>
   );
 }

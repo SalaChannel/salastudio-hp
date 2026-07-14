@@ -9,10 +9,10 @@ export function LegalPage({
 }) {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16">
-      <h1 className="font-mono text-3xl font-semibold tracking-tight text-ink">
+      <h1 className="font-serif text-3xl font-bold tracking-wide text-ink">
         {title}
       </h1>
-      <div className="legal-content mt-10 space-y-8 text-base leading-7 text-ink/80">
+      <div className="legal-content mt-10 space-y-8 text-base leading-7 text-muted">
         {children}
       </div>
     </main>
@@ -28,7 +28,7 @@ export function Section({
 }) {
   return (
     <section className="space-y-3">
-      <h2 className="font-mono text-xl font-semibold tracking-tight text-ink">
+      <h2 className="font-serif text-xl font-bold tracking-wide text-ink">
         {title}
       </h2>
       {children}
@@ -45,7 +45,7 @@ export function SubSection({
 }) {
   return (
     <div className="space-y-2 pt-2">
-      <h3 className="font-mono text-lg font-semibold tracking-tight text-ink">
+      <h3 className="font-serif text-lg font-bold tracking-wide text-ink">
         {title}
       </h3>
       {children}

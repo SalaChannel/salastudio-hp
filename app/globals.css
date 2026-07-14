@@ -1,91 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #15181d;
-  --ink: #15181d;
-  --paper: #ffffff;
-  --line: #e3e1da;
-  --teal: #2a9d8f;
-  --teal-deep: #1d6e64;
-  --red: #d42a2a;
-  --red-deep: #a81e1e;
+  --background: #15130f;
+  --foreground: #ede7da;
+  --bg: #15130f;
+  --bg-soft: #1b1814;
+  --paper: #f3eee3;
+  --ink: #ede7da;
+  --muted: #9c9488;
+  --amber: #e3a34c;
+  --amber-deep: #c6822c;
+  --line: rgba(237, 231, 218, 0.12);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-ink: var(--ink);
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
   --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-amber: var(--amber);
+  --color-amber-deep: var(--amber-deep);
   --color-line: var(--line);
-  --color-teal: var(--teal);
-  --color-teal-deep: var(--teal-deep);
-  --color-red: var(--red);
-  --color-red-deep: var(--red-deep);
-  --font-sans: var(--font-ibm-plex-sans-jp);
+  --font-sans: var(--font-zen-kaku);
+  --font-serif: var(--font-shippori);
   --font-mono: var(--font-ibm-plex-mono);
 }
 
 body {
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
 }
 
-.tag-frame {
-  position: relative;
-  display: inline-block;
-  padding: 10px 18px;
-  margin-bottom: 26px;
-  width: fit-content;
+@keyframes wave-drift {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
 }
 
-.tag-frame span {
-  position: relative;
-  z-index: 1;
-  font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.tag-frame i {
-  position: absolute;
-  border: 2px solid;
-  display: block;
-  pointer-events: none;
-}
-
-.tag-frame i.f1 {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.tag-frame i.f2 {
-  top: -7px;
-  left: 14px;
-  right: -7px;
-  bottom: 7px;
-  z-index: 0;
-}
-
-.tag-frame.apps i.f1,
-.tag-frame.apps i.f2 {
-  border-color: #2a9d8f;
-}
-
-.tag-frame.apps span {
-  color: #1d6e64;
-}
-
-.tag-frame.mix i.f1,
-.tag-frame.mix i.f2 {
-  border-color: #d42a2a;
-}
-
-.tag-frame.mix span {
-  color: #a81e1e;
+.hero-wave {
+  animation: wave-drift 8s ease-in-out infinite;
 }
