@@ -9,8 +9,8 @@ export default function Home() {
         <Image
           src="/brand/salastudio-header.png"
           alt="SalaStudio"
-          width={1800}
-          height={600}
+          width={12751}
+          height={5227}
           priority
           className="h-auto w-full max-w-[900px] object-contain"
         />
@@ -18,7 +18,7 @@ export default function Home() {
 
       <div className="flex flex-1 flex-col border-t border-line md:flex-row">
         <section className="flex flex-1 flex-col justify-center gap-4 border-b border-line px-8 py-16 md:border-b-0 md:border-r md:px-12">
-          <TagFrame color="teal">Apps</TagFrame>
+          <TagFrame variant="apps">Apps</TagFrame>
           <h2 className="font-mono text-3xl font-semibold tracking-tight text-ink">
             アプリ開発
           </h2>
@@ -34,7 +34,7 @@ export default function Home() {
         </section>
 
         <section className="flex flex-1 flex-col justify-center gap-4 px-8 py-16 md:px-12">
-          <TagFrame color="red">Mix</TagFrame>
+          <TagFrame variant="mix">Mix</TagFrame>
           <h2 className="font-mono text-3xl font-semibold tracking-tight text-ink">
             ミックス受注
           </h2>

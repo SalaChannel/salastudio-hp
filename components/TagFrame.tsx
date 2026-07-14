@@ -1,40 +1,26 @@
-import type { ReactNode } from "react";
+type TagFrameVariant = "apps" | "mix";
 
-type TagFrameColor = "teal" | "red";
-
-const colorClass: Record<TagFrameColor, string> = {
-  teal: "text-teal border-teal",
-  red: "text-red border-red",
+const colorToVariant: Record<"teal" | "red", TagFrameVariant> = {
+  teal: "apps",
+  red: "mix",
 };
 
 export function TagFrame({
   children,
   color,
+  variant,
 }: {
-  children: ReactNode;
-  color: TagFrameColor;
+  children: string;
+  color?: "teal" | "red";
+  variant?: TagFrameVariant;
 }) {
-  const tone = colorClass[color];
+  const resolved = variant ?? (color ? colorToVariant[color] : "apps");
 
   return (
-    <span className={`relative inline-block ${tone}`}>
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-0 border-2 border-current"
-      />
-      <span
-        aria-hidden
-        className="pointer-events-none absolute border-2 border-current"
-        style={{
-          top: "-7px",
-          left: "14px",
-          right: "-7px",
-          bottom: "-7px",
-        }}
-      />
-      <span className="relative z-10 block px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.22em]">
-        {children}
-      </span>
-    </span>
+    <div className={`tag-frame ${resolved}`}>
+      <i className="f2" aria-hidden />
+      <i className="f1" aria-hidden />
+      <span>{children}</span>
+    </div>
   );
 }
